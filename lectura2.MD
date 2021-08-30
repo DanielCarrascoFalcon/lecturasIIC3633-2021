@@ -1,1 +1,12 @@
+# Matrix Factorization Techniques for Recommender System
 
+El paper describe varios tipos de sistemas recomendadores, tales como *Content Filtering* o *Colaborative Filtering*, donde en este último podemos encontrar dos áreas bien definidas, una basada en los vecinos y otra en factores latentes, cuyas diferencias se explican a gran detalle posteriormente.
+
+La técnica que analizan es la factorización matricial, cuyos resultados han sido los mejores al implementar el uso de factores latentes. Consiste básicamente en obtener patrones (a veces inentendibles por el ser humano) en una matriz user-item para ubicar al usuario en el espacio. Esto es muy útil ya que no depende sólo de un *feedback explícito*, sino que puede obtener conclusiones a partir de comportamientos, de acciones, de historiales, de seguimiento de clicks, etc. lo que claramente lo hace un sistema mucho más completo. 
+Sumado a lo anterior, se plantean varias mejoras a la implementación, aplicando dinámicas temporales, analizando sesgos de los usuarios y manejando mediante pesos la confianza en algunos factores, teniendo finalmente un modelo bastante robusto para generar buenas recomendaciones.
+
+Por último, se comenta la experiencia obtenida en el NETFLIX PRIZE por parte del equipo y las grandes mejoras obtenidas con esta nueva forma de abordar el problema versus la clásica técnica de vecinos más cercanos.
+
+En general me gustó el paper, creo que aborda de manera clara, sencilla e ilustrativa el funcionamiento del sistema y a la vez también nos proporcionan toda la modelación matemática que lo sustenta, sin embargo, creo que faltó un poco más de análisis respecto a la complejidad del algoritmo, qué tan escalable puede llegar a ser, cómo se comporta respecto a la cantidad de inputs, cuánto tiempo toma entrenarlo, etc. Siento que exponer esos datos abre la discusión para que futuros investigadores vayan de forma progresiva solucionando el problema y finalmente se llegue a un súper modelo que represente fielmente la realidad y tenga un costo computacional razonable. 
+
+Finalmente rescatar lo más útil de esta técnica, que sería la solución del cold-start y la utilización de matrices con gran cantidad de entradas vacías, son dos problemas que propuestas anteriores (como la imputación de valores) no habían logrado superar, además al analizar varios aspectos del usuario siento que es más realista y puede entregar recomendaciones muy acertadas.
